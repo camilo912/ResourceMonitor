@@ -8,6 +8,6 @@ Practica del curso de Sistemas Operativos, el cual consiste en realizar un monit
 
 # Ejecutar
 
-  python Practica.py
+    python Practica.py
   
 
