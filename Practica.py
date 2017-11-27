@@ -89,10 +89,14 @@ if __name__ == '__main__':
  
  
             proceso = "%s, %d, %s, %s, %f, %s, %s, %s, %s, %s, %s, %d ,%d, %s, %s,%d\n" \
-                      % (hora, pid, name, state, cpuUsage, memFisica, memVirtual, readOpDisk, writeOpDisk, readBytes, writeBytes,0 , numShm, prioriedad, nice,threads)
+                      % (hora, pid, name, state, cpuUsage, memFisica, memVirtual, readOpDisk, writeOpDisk, readBytes, writeBytes,0 , numShm, prioridad, nice,threads)
             arch.write(proceso)
+    
         timeFin = time.time() - timeIni
+        timeSleep = 1.0 - timeFin
+        time.sleep(timeSleep)
+        
+        #print timeFin
+        #while timeFin < 1.0:
+        #    timeFin = time.time() - timeIni
         print timeFin
-        while timeFin < 1.0:
-            timeFin = time.time() - timeIni
-        print timeFi
