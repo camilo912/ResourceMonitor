@@ -48,7 +48,7 @@ if __name__ == '__main__':
             name = lineaStat[1] #NAME
             name = name[1:-1]
             state = lineaStat[2] #STATE
-            prioriedad = lineaStat[17]
+            prioridad = lineaStat[17]
             nice = lineaStat[18]
             # %CPU
             startTime = float(lineaStat[21])
@@ -75,11 +75,6 @@ if __name__ == '__main__':
  
             task = os.listdir("/proc/%d/task" % pid)
             threads = len(task)
- 
-            maps = "/proc/%d/maps" % pid
-            fileMaps = open(maps, 'r')
-            lineaMaps = fileMaps.read()
-            count = lineaMaps.count("%d" % pid)
  
             io = "/proc/%d/io" % pid
             fileIO = open(io, 'r')
